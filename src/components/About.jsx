@@ -44,16 +44,15 @@ const About = () => {
             <motion.p
                 variants={(fadeIn('', '', 0.1), 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-                I'm a seasoned frontend developer with a passion for coding and
-                user interfaces. My core competencies lie in leveraging
-                cutting-edge technologies such as React, Next.js, TypeScript,
-                React Native, Node.js, MongoDB, etc. I also have extensive
-                experience working with UI-focused tools like Tailwind and SASS.
-                In a past life, I worked at a US-based company, developing
-                innovative shoppable video experiences for Shopify customers.
-                Today, I'm honing my skills at a UK organization, building a
-                transformative extension that leverages the power of AI to
-                autofill job applications, making the hiring process more
+                I'm a seasoned frontend developer, my core competencies lie in leveraging
+                cutting-edge technologies such as React, Next.js,3JS,
+                TypeScript, React Native, Node.js, MongoDB, etc. I also have
+                extensive experience working with UI-focused tools like Tailwind
+                and SASS. In a past life, I worked at a US-based company,
+                developing innovative shoppable video experiences for Shopify
+                customers. Today, I'm honing my skills at a UK organization,
+                building a transformative extension that leverages the power of
+                AI to autofill job applications, making the hiring process more
                 seamless for users. My passion for web development extends
                 beyond my day-to-day work. I enjoy keeping up with the latest
                 industry trends and tools, which helps me bring a fresh and
