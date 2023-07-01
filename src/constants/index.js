@@ -23,6 +23,13 @@ import {
     jobit,
     tripguide,
     threejs,
+    showday,
+    rcd,
+    huzzle,
+    next,
+    stripe,
+    // sass,
+    // github,
 } from '../assets'
 
 export const navLinks = [
@@ -50,16 +57,36 @@ const services = [
         icon: mobile,
     },
     {
-        title: 'Backend Developer',
-        icon: backend,
-    },
-    {
         title: 'UI/UX Designer',
         icon: figma,
     },
 ]
 
 const technologies = [
+    {
+        name: 'React JS',
+        icon: reactjs,
+    },
+    {
+        name: 'TypeScript',
+        icon: typescript,
+    },
+    {
+        name: 'Next JS',
+        icon: next,
+    },
+    {
+        name: 'Tailwind CSS',
+        icon: tailwind,
+    },
+    {
+        name: 'Redux Toolkit',
+        icon: redux,
+    },
+    {
+        name: 'Three JS',
+        icon: threejs,
+    },
     {
         name: 'HTML 5',
         icon: html,
@@ -73,32 +100,8 @@ const technologies = [
         icon: javascript,
     },
     {
-        name: 'TypeScript',
-        icon: typescript,
-    },
-    {
-        name: 'React JS',
-        icon: reactjs,
-    },
-    {
-        name: 'Redux Toolkit',
-        icon: redux,
-    },
-    {
-        name: 'Tailwind CSS',
-        icon: tailwind,
-    },
-    {
         name: 'Node JS',
         icon: nodejs,
-    },
-    {
-        name: 'MongoDB',
-        icon: mongodb,
-    },
-    {
-        name: 'Three JS',
-        icon: threejs,
     },
     {
         name: 'git',
@@ -109,62 +112,65 @@ const technologies = [
         icon: figma,
     },
     {
-        name: 'docker',
-        icon: docker,
+        name: 'Stripe',
+        icon: stripe,
     },
+    // {
+    //     name: 'GitHub',
+    //     icon: github,
+    // },
+    // {
+    //     name: 'SASS',
+    //     icon: sass,
+    // },
+    // {
+    //     name: 'MongoDB',
+    //     icon: mongodb,
+    // },
+
+    // {
+    //     name: 'docker',
+    //     icon: docker,
+    // },
 ]
 
 const experiences = [
     {
-        title: 'React.js Developer',
-        company_name: 'Starbucks',
-        icon: starbucks,
+        title: 'Assistant Engineer',
+        company_name: 'Road Construction Department, Govt. of Bihar',
+        icon: rcd,
         iconBg: '#383E56',
-        date: 'March 2020 - April 2021',
+        date: 'Aug 2018 - Dec 2022',
         points: [
-            'Developing and maintaining web applications using React.js and other related technologies.',
-            'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-            'Implementing responsive design and ensuring cross-browser compatibility.',
-            'Participating in code reviews and providing constructive feedback to other developers.',
+            'Constant Monitoring of Road Projects under Bihar Government almost 1300 kilometers of road.',
+            'Checking of Estimates, Tender Documents, Cost Variations, Time Extensions, DPR etc.for Road Projects.',
+            ' Awarding NOC for Retail Outlets for Seemanchal Wing comprising 10 districts under Government of Bihar.',
+            'Frequently deployed as Patrolling Magistrate in government elections i.e. LS,RS etc. , flood monitoring officer (during rainy season).',
         ],
     },
     {
-        title: 'React Native Developer',
-        company_name: 'Tesla',
-        icon: tesla,
+        title: 'Frontend Developer (Intern)',
+        company_name: 'Showday(showday.io)',
+        icon: showday,
         iconBg: '#E6DEDD',
-        date: 'Jan 2021 - Feb 2022',
+        date: 'Dec 2022 - Apr 2022',
         points: [
-            'Developing and maintaining web applications using React.js and other related technologies.',
-            'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-            'Implementing responsive design and ensuring cross-browser compatibility.',
-            'Participating in code reviews and providing constructive feedback to other developers.',
+            'As an intern at Showday, I utilized my Javascript, Next.js, Typescript skills to contribute to the development of an innovative application that creates shoppable videos for Shopify clients.',
+            'My exposure to cutting-edge frontend libraries during the internship helped enhance the user interface, resulting in a seamless and efficient shopping experience for users.',
+            'I also honed my proficiency in SASS for styling, assisting in developing an attractive and intuitive UI that drove customer engagement and boosted user satisfaction..',
         ],
     },
     {
         title: 'Web Developer',
-        company_name: 'Shopify',
-        icon: shopify,
+        company_name: 'Huzzle(huzzle.app)',
+        icon: huzzle,
         iconBg: '#383E56',
-        date: 'Jan 2022 - Jan 2023',
+        date: 'May 2022 - Present',
         points: [
-            'Developing and maintaining web applications using React.js and other related technologies.',
-            'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-            'Implementing responsive design and ensuring cross-browser compatibility.',
-            'Participating in code reviews and providing constructive feedback to other developers.',
-        ],
-    },
-    {
-        title: 'Full stack Developer',
-        company_name: 'Meta',
-        icon: meta,
-        iconBg: '#E6DEDD',
-        date: 'Jan 2023 - Present',
-        points: [
-            'Developing and maintaining web applications using React.js and other related technologies.',
-            'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-            'Implementing responsive design and ensuring cross-browser compatibility.',
-            'Participating in code reviews and providing constructive feedback to other developers.',
+            'In my current role at Huzzle, I am developing a cutting-edge Google Chrome extension utilizing React.js and TypeScript',
+            'This extension is designed from the ground up to streamline job applications for users, using advanced AI technologies.',
+            'Leveraging Chat GPT, the extension automatically identifies form input fields, effectively interacting with a wide range of application interfaces',
+            'For descriptive response fields, the extension harnesses the power of Chat GPT to generate articulate and contextually accurate answers, thereby transforming the users experience',
         ],
     },
 ]

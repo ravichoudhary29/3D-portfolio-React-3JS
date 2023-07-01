@@ -40,12 +40,11 @@ const About = () => {
                 <p className={styles.sectionSubText}>Introduction</p>
                 <h2 className={styles.sectionHeadText}>Overview</h2>
             </motion.div>
-
             <motion.p
                 variants={(fadeIn('', '', 0.1), 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-                I'm a seasoned frontend developer, my core competencies lie in leveraging
-                cutting-edge technologies such as React, Next.js,3JS,
+                I'm a seasoned frontend developer, my core competencies lie in
+                leveraging cutting-edge technologies such as React, Next.js,3JS,
                 TypeScript, React Native, Node.js, MongoDB, etc. I also have
                 extensive experience working with UI-focused tools like Tailwind
                 and SASS. In a past life, I worked at a US-based company,
@@ -62,7 +61,7 @@ const About = () => {
                 solutions.
             </motion.p>
 
-            <div className="mt-20 flex flex-wrap gap-10">
+            <div className="mt-20 flex flex-wrap gap-10 justify-center">
                 {services.map((service, index) => (
                     <ServiceCard
                         key={service.title}
