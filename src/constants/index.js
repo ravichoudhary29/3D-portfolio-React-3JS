@@ -30,8 +30,16 @@ import {
     stripe,
     dashboard,
     build,
+    portfolio,
+    uberclone,
+    ecommerce,
+    gym,
+    pingpong,
+    tesla_landing,
+    instagram,
     // sass,
     // github,
+    netflix,
 } from '../assets'
 
 export const navLinks = [
@@ -207,7 +215,7 @@ const testimonials = [
 const projects = [
     {
         name: 'React Dashboard',
-        category: 'Featured/React Projects',
+        category: 'Featured React/React-Native Projects',
         description:
             'Built an advanced React Admin Dashboard featuring diverse UI components, a full-featured calendar, kanban board, WYSIWYG editor, color picker, and multiple dynamic charts, utilizing Syncfusions robust UI suite.',
         tags: [
@@ -230,7 +238,8 @@ const projects = [
         build_link: 'https://admin-dashboard-reactjs.vercel.app/',
     },
     {
-        name: 'Job IT',
+        name: 'Personal Portfolio',
+        category: 'Featured React/React-Native Projects',
         description:
             'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
         tags: [
@@ -239,19 +248,22 @@ const projects = [
                 color: 'blue-text-gradient',
             },
             {
-                name: 'restapi',
+                name: 'sanity',
                 color: 'green-text-gradient',
             },
             {
-                name: 'scss',
+                name: 'tailwind',
                 color: 'pink-text-gradient',
             },
         ],
-        image: jobit,
-        source_code_link: 'https://github.com/',
+        image: portfolio,
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/personalportfolio',
+        build_link: 'https://www.thecodingnomad.in',
     },
     {
-        name: 'Trip Guide',
+        name: 'Uber 2.0 (React Native)',
+        category: 'Featured React/React-Native Projects',
         description:
             'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
         tags: [
@@ -268,8 +280,164 @@ const projects = [
                 color: 'pink-text-gradient',
             },
         ],
-        image: tripguide,
-        source_code_link: 'https://github.com/',
+        image: uberclone,
+        build_link: 'https://google.com',
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/Uber2.0-ReactNative',
+    },
+    {
+        name: 'E-commerce Website',
+        category: 'Vanilla JS Projects',
+        description:
+            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+        tags: [
+            {
+                name: 'html',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'css',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'javascript',
+                color: 'pink-text-gradient',
+            },
+        ],
+        image: ecommerce,
+        build_link:
+            'https://ravichoudhary29.github.io/E-commerce-VanillaJS/index.html',
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/E-commerce-VanillaJS',
+    },
+    {
+        name: 'Gym Website',
+        category: 'Vanilla JS Projects',
+        description:
+            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+        tags: [
+            {
+                name: 'html',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'css',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'javascript',
+                color: 'pink-text-gradient',
+            },
+        ],
+        image: gym,
+        build_link: 'https://ravichoudhary29.github.io/gym-website-VanillaJS/',
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/gym-website-VanillaJS',
+    },
+    {
+        name: 'Ping Pong Game',
+        category: 'Vanilla JS Projects',
+        description:
+            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+        tags: [
+            {
+                name: 'html',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'css',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'javascript',
+                color: 'pink-text-gradient',
+            },
+        ],
+        image: pingpong,
+        build_link:
+            'https://ravichoudhary29.github.io/ping-pong-game-VanillaJS/',
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/ping-pong-game-VanillaJS',
+    },
+    {
+        name: 'Tesla Landing Page',
+        category: 'Vanilla JS Projects',
+        description:
+            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+        tags: [
+            {
+                name: 'html',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'css',
+                color: 'green-text-gradient',
+            },
+            // {
+            //     name: 'javascript',
+            //     color: 'pink-text-gradient',
+            // },
+        ],
+        image: tesla_landing,
+        build_link: 'https://ravichoudhary29.github.io/tesla-VanillaJS/',
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/ping-pong-game-VanillaJS',
+    },
+    {
+        name: 'Netflix 2.0 Clone',
+        category: 'Top Tech Clones',
+        description:
+            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+        tags: [
+            {
+                name: 'react',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'tailwind',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'axios',
+                color: 'pink-text-gradient',
+            },
+            {
+                name: 'redux',
+                color: 'blue-text-gradient',
+            },
+        ],
+        image: netflix,
+        build_link: 'https://netflix-2-0-ruddy.vercel.app/',
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/netflix-2.0',
+    },
+    {
+        name: 'Instagram 2.0 Clone',
+        category: 'Top Tech Clones',
+        description:
+            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+        tags: [
+            {
+                name: 'react',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'tailwind',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'firebase',
+                color: 'pink-text-gradient',
+            },
+            {
+                name: 'headlessui',
+                color: 'blue-text-gradient',
+            },
+        ],
+        image: instagram,
+        build_link: 'https://netflix-2-0-ruddy.vercel.app/',
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/netflix-2.0',
     },
 ]
 

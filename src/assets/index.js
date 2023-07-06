@@ -7,6 +7,14 @@ import github from './github.png'
 import menu from './menu.svg'
 import close from './close.svg'
 import build from './build.png'
+import portfolio from './personal-portfolio.png'
+import uberclone from './uberclone.png'
+import ecommerce from './ecommerce.png'
+import gym from './gym.png'
+import pingpong from './pingpong.png'
+import tesla_landing from './tesla_landing.png'
+import netflix from './netflix.png'
+import instagram from './instagram.png'
 
 import css from './tech/css.png'
 import docker from './tech/docker.png'
@@ -39,6 +47,7 @@ import dashboard from './dashboard.png'
 
 export {
     // sass,
+    ecommerce,
     build,
     stripe,
     next,
@@ -74,4 +83,11 @@ export {
     jobit,
     tripguide,
     dashboard,
+    portfolio,
+    uberclone,
+    gym,
+    pingpong,
+    tesla_landing,
+    netflix,
+    instagram,
 }

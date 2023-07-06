@@ -87,14 +87,14 @@ const ProjectCard = ({
 
 const Works = () => {
     const allCategories = [
-        'Featured/React Projects',
+        'Featured React/React-Native Projects',
         'Vanilla JS Projects',
         'Top Tech Clones',
         'Other Important Projects',
     ]
 
     const categoryDescriptions = {
-        'Featured/React Projects':
+        'Featured React/React-Native Projects':
             'These projects are modern looking with the latest used libraries.',
         'Vanilla JS Projects':
             'These projects are built using Vanilla Javascript.',
@@ -131,7 +131,7 @@ const Works = () => {
                     <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
                         {categoryDescriptions[category]}
                     </p>
-                    <div className="flex flex-wrap gap-7">
+                    <div className="flex flex-wrap gap-7 mt-5">
                         {projects
                             .filter((project) => project.category === category)
                             .map((project, index) => (
