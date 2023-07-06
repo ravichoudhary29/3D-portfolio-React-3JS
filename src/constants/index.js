@@ -28,6 +28,8 @@ import {
     huzzle,
     next,
     stripe,
+    dashboard,
+    build,
     // sass,
     // github,
 } from '../assets'
@@ -204,16 +206,17 @@ const testimonials = [
 
 const projects = [
     {
-        name: 'Car Rent',
+        name: 'React Dashboard',
+        category: 'Featured/React Projects',
         description:
-            'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+            'Built an advanced React Admin Dashboard featuring diverse UI components, a full-featured calendar, kanban board, WYSIWYG editor, color picker, and multiple dynamic charts, utilizing Syncfusions robust UI suite.',
         tags: [
             {
                 name: 'react',
                 color: 'blue-text-gradient',
             },
             {
-                name: 'mongodb',
+                name: 'syncfusion',
                 color: 'green-text-gradient',
             },
             {
@@ -221,8 +224,10 @@ const projects = [
                 color: 'pink-text-gradient',
             },
         ],
-        image: carrent,
-        source_code_link: 'https://github.com/',
+        image: dashboard,
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/Admin-Dashboard-Reactjs',
+        build_link: 'https://admin-dashboard-reactjs.vercel.app/',
     },
     {
         name: 'Job IT',
