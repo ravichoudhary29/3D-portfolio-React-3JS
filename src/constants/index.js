@@ -40,6 +40,9 @@ import {
     // sass,
     // github,
     netflix,
+    chatgpt,
+    weather,
+    pomodoro,
 } from '../assets'
 
 export const navLinks = [
@@ -146,16 +149,16 @@ const technologies = [
 
 const experiences = [
     {
-        title: 'Assistant Engineer',
-        company_name: 'Road Construction Department, Govt. of Bihar',
-        icon: rcd,
+        title: 'Web Developer',
+        company_name: 'Huzzle(huzzle.app)',
+        icon: huzzle,
         iconBg: '#383E56',
-        date: 'Aug 2018 - Dec 2022',
+        date: 'May 2022 - Present',
         points: [
-            'Constant Monitoring of Road Projects under Bihar Government almost 1300 kilometers of road.',
-            'Checking of Estimates, Tender Documents, Cost Variations, Time Extensions, DPR etc.for Road Projects.',
-            ' Awarding NOC for Retail Outlets for Seemanchal Wing comprising 10 districts under Government of Bihar.',
-            'Frequently deployed as Patrolling Magistrate in government elections i.e. LS,RS etc. , flood monitoring officer (during rainy season).',
+            'In my current role at Huzzle, I am developing a cutting-edge Google Chrome extension utilizing React.js and TypeScript',
+            'This extension is designed from the ground up to streamline job applications for users, using advanced AI technologies.',
+            'Leveraging Chat GPT, the extension automatically identifies form input fields, effectively interacting with a wide range of application interfaces',
+            'For descriptive response fields, the extension harnesses the power of Chat GPT to generate articulate and contextually accurate answers, thereby transforming the users experience',
         ],
     },
     {
@@ -170,17 +173,18 @@ const experiences = [
             'I also honed my proficiency in SASS for styling, assisting in developing an attractive and intuitive UI that drove customer engagement and boosted user satisfaction..',
         ],
     },
+
     {
-        title: 'Web Developer',
-        company_name: 'Huzzle(huzzle.app)',
-        icon: huzzle,
+        title: 'Assistant Engineer',
+        company_name: 'Road Construction Department, Govt. of Bihar',
+        icon: rcd,
         iconBg: '#383E56',
-        date: 'May 2022 - Present',
+        date: 'Aug 2018 - Dec 2022',
         points: [
-            'In my current role at Huzzle, I am developing a cutting-edge Google Chrome extension utilizing React.js and TypeScript',
-            'This extension is designed from the ground up to streamline job applications for users, using advanced AI technologies.',
-            'Leveraging Chat GPT, the extension automatically identifies form input fields, effectively interacting with a wide range of application interfaces',
-            'For descriptive response fields, the extension harnesses the power of Chat GPT to generate articulate and contextually accurate answers, thereby transforming the users experience',
+            'Constant Monitoring of Road Projects under Bihar Government almost 1300 kilometers of road.',
+            'Checking of Estimates, Tender Documents, Cost Variations, Time Extensions, DPR etc.for Road Projects.',
+            ' Awarding NOC for Retail Outlets for Seemanchal Wing comprising 10 districts under Government of Bihar.',
+            'Frequently deployed as Patrolling Magistrate in government elections i.e. LS,RS etc. , flood monitoring officer (during rainy season).',
         ],
     },
 ]
@@ -438,6 +442,83 @@ const projects = [
         build_link: 'https://netflix-2-0-ruddy.vercel.app/',
         source_code_link_github:
             'https://github.com/ravichoudhary29/netflix-2.0',
+    },
+    {
+        name: 'ChatGPT 2.0 Clone',
+        category: 'Top Tech Clones',
+        description:
+            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+        tags: [
+            {
+                name: 'react',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'tailwind',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'firebase',
+                color: 'pink-text-gradient',
+            },
+            {
+                name: 'google-auth',
+                color: 'blue-text-gradient',
+            },
+        ],
+        image: chatgpt,
+        build_link: 'https://chat-gpt-two-kappa.vercel.app/',
+        source_code_link_github: 'https://github.com/ravichoudhary29/chat-GPT',
+    },
+    {
+        name: 'React Chrome Weather Extension',
+        category: 'Other Important Projects',
+        description:
+            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+        tags: [
+            {
+                name: 'react',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'typescript',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'material-ui',
+                color: 'pink-text-gradient',
+            },
+        ],
+        image: weather,
+        build_link:
+            'https://chrome.google.com/webstore/category/extensions?hl=en',
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/React-Typescript-MUI-Chrome-Weather-Extension',
+    },
+    {
+        name: 'Pomodoro Timer Chrome Extension',
+        category: 'Other Important Projects',
+        description:
+            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+        tags: [
+            {
+                name: 'html',
+                color: 'blue-text-gradient',
+            },
+            {
+                name: 'css',
+                color: 'green-text-gradient',
+            },
+            {
+                name: 'javascript',
+                color: 'pink-text-gradient',
+            },
+        ],
+        image: pomodoro,
+        build_link:
+            'https://chrome.google.com/webstore/category/extensions?hl=en',
+        source_code_link_github:
+            'https://github.com/ravichoudhary29/pomodoro-timer--chrome-extension',
     },
 ]
 

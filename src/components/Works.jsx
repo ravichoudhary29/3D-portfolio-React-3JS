@@ -6,7 +6,7 @@ import { styles } from '../styles'
 import { github, build } from '../assets'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constants'
-import { fadeIn, textVariant } from '../utils/motion'
+import { fadeIn, slideIn, textVariant } from '../utils/motion'
 
 const ProjectCard = ({
     index,
@@ -25,7 +25,7 @@ const ProjectCard = ({
                     scale: 1,
                     speed: 450,
                 }}
-                className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+                className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-fit">
                 <div className="relative w-full h-[230px]">
                     <img
                         src={image}
@@ -95,10 +95,11 @@ const Works = () => {
 
     const categoryDescriptions = {
         'Featured React/React-Native Projects':
-            'These projects are modern looking with the latest used libraries.',
+            'These projects are modern looking with the latest used libraries. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         'Vanilla JS Projects':
-            'These projects are built using Vanilla Javascript.',
-        'Top Tech Clones': 'These are clones of popular tech platforms.',
+            'These projects are built using Vanilla Javascript. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Top Tech Clones':
+            'These are clones of popular tech platforms. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         'Other Important Projects':
             'These are some of my other important projects.',
     }
@@ -123,27 +124,42 @@ const Works = () => {
                 </motion.p>
             </div>
 
-            {allCategories.map((category, index) => (
-                <div key={category} className="mt-20">
-                    <h3 className="text-3xl font-bold text-blue-600">
-                        {category}
-                    </h3>
-                    <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-                        {categoryDescriptions[category]}
-                    </p>
-                    <div className="flex flex-wrap gap-7 mt-5">
-                        {projects
-                            .filter((project) => project.category === category)
-                            .map((project, index) => (
-                                <ProjectCard
-                                    key={`project-${index}`}
-                                    index={index}
-                                    {...project}
-                                />
-                            ))}
+            {allCategories.map((category) => {
+                function chunk(array, size) {
+                    const chunked_arr = []
+                    let index = 0
+                    while (index < array.length) {
+                        chunked_arr.push(array.slice(index, size + index))
+                        index += size
+                    }
+                    return chunked_arr
+                }
+                const categoryProjects = projects.filter(
+                    (project) => project.category === category
+                )
+
+                return (
+                    <div key={category} className="mt-25">
+                        <h3 className="text-3xl font-bold text-blue-600">
+                            {category}
+                        </h3>
+                        <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+                            {categoryDescriptions[category]}
+                        </p>
+                        {chunk(categoryProjects, 3).map((projectRow, index) => (
+                            <div key={index} className="flex gap-7 mt-5">
+                                {projectRow.map((project, index) => (
+                                    <ProjectCard
+                                        key={`project-${index}`}
+                                        index={index}
+                                        {...project}
+                                    />
+                                ))}
+                            </div>
+                        ))}
                     </div>
-                </div>
-            ))}
+                )
+            })}
         </>
     )
 }

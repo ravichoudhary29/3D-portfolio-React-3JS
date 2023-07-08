@@ -15,6 +15,9 @@ import pingpong from './pingpong.png'
 import tesla_landing from './tesla_landing.png'
 import netflix from './netflix.png'
 import instagram from './instagram.png'
+import chatgpt from './chatgpt.png'
+import weather from './weather.jpg'
+import pomodoro from './pomodoro.jpg'
 
 import css from './tech/css.png'
 import docker from './tech/docker.png'
@@ -90,4 +93,7 @@ export {
     tesla_landing,
     netflix,
     instagram,
+    chatgpt,
+    weather,
+    pomodoro,
 }
