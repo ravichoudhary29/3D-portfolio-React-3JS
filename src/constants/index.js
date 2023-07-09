@@ -43,6 +43,9 @@ import {
     chatgpt,
     weather,
     pomodoro,
+    chandan,
+    amit,
+    ravi2,
 } from '../assets'
 
 export const navLinks = [
@@ -192,27 +195,30 @@ const experiences = [
 const testimonials = [
     {
         testimonial:
-            'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-        name: 'Sara Lee',
-        designation: 'CFO',
-        company: 'Acme Co',
-        image: 'https://randomuser.me/api/portraits/women/4.jpg',
+            'During their internship, this individual demonstrated a solid grasp of our codebase, swiftly fixing bugs and adding new features to our Next.js application. Their contribution was invaluable to our shoppable video application.',
+        name: 'Chandan Chaudhary',
+        designation: 'Tech Lead',
+        company: 'Showday',
+        image: chandan,
+        url: 'https://www.linkedin.com/in/chaudharychandan/',
     },
     {
         testimonial:
-            "I've never met a web developer who truly cares about their clients' success like Rick does.",
-        name: 'Chris Brown',
-        designation: 'COO',
-        company: 'DEF Corp',
-        image: 'https://randomuser.me/api/portraits/men/5.jpg',
+            'With their outstanding skills in React and TypeScript, this developer is making significant strides in building a GPT-powered Chrome extension for job application autofill. Their dedication and talent are remarkable.',
+        name: 'Amit Choudhary',
+        designation: 'Founder & CTO',
+        company: 'Huzzle',
+        image: amit,
+        url: 'https://www.linkedin.com/in/amit-choudhary-baa919101/',
     },
     {
         testimonial:
-            "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-        name: 'Lisa Wang',
-        designation: 'CTO',
-        company: '456 Enterprises',
-        image: 'https://randomuser.me/api/portraits/women/6.jpg',
+            'This person has a unique ability to quickly learn and adapt to new challenges. Their problem-solving skills are exceptional, always bringing innovative solutions to the table. Their rapid adaptability is truly commendable.',
+        name: 'Ravi Kumar',
+        designation: 'Sr. Backend Engineer',
+        company: 'Fandom Future',
+        image: ravi2,
+        url: 'https://www.linkedin.com/in/ravi-kumar-yadav-058781b4/',
     },
 ]
 

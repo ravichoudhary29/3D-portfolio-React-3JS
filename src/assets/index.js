@@ -18,6 +18,9 @@ import instagram from './instagram.png'
 import chatgpt from './chatgpt.png'
 import weather from './weather.jpg'
 import pomodoro from './pomodoro.jpg'
+import chandan from './chandan.png'
+import amit from './amit.png'
+import ravi2 from './ravi2.png'
 
 import css from './tech/css.png'
 import docker from './tech/docker.png'
@@ -96,4 +99,7 @@ export {
     chatgpt,
     weather,
     pomodoro,
+    chandan,
+    amit,
+    ravi2,
 }

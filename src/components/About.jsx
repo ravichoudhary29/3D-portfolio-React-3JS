@@ -49,16 +49,16 @@ const About = () => {
                 extensive experience working with UI-focused tools like Tailwind
                 and SASS. In a past life, I worked at a US-based company,
                 developing innovative shoppable video experiences for Shopify
-                customers. Today, I'm honing my skills at a UK organization,
-                building a transformative extension that leverages the power of
-                AI to autofill job applications, making the hiring process more
-                seamless for users. My passion for web development extends
-                beyond my day-to-day work. I enjoy keeping up with the latest
-                industry trends and tools, which helps me bring a fresh and
-                innovative approach to the projects I undertake. I'm constantly
-                seeking opportunities to learn and grow, with a relentless drive
-                to create impactful, efficient, and user-friendly digital
-                solutions.
+                customers. Currently, I'm sharpening my skills at a UK-based
+                organization, developing a revolutionary extension that employs
+                AI to autofill job applications. This innovation simplifies the
+                hiring process, making it more seamless for users. My passion
+                for web development extends beyond my day-to-day work. I enjoy
+                keeping up with the latest industry trends and tools, which
+                helps me bring a fresh and innovative approach to the projects I
+                undertake. I'm constantly seeking opportunities to learn and
+                grow, with a relentless drive to create impactful, efficient,
+                and user-friendly digital solutions.
             </motion.p>
 
             <div className="mt-20 flex flex-wrap gap-10 justify-center">
