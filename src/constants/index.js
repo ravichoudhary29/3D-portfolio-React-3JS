@@ -363,30 +363,30 @@ const projects = [
         source_code_link_github:
             'https://github.com/ravichoudhary29/ping-pong-game-VanillaJS',
     },
-    {
-        name: 'Tesla Landing Page',
-        category: 'Vanilla JS Projects',
-        description:
-            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
-        tags: [
-            {
-                name: 'html',
-                color: 'blue-text-gradient',
-            },
-            {
-                name: 'css',
-                color: 'green-text-gradient',
-            },
-            // {
-            //     name: 'javascript',
-            //     color: 'pink-text-gradient',
-            // },
-        ],
-        image: tesla_landing,
-        build_link: 'https://ravichoudhary29.github.io/tesla-VanillaJS/',
-        source_code_link_github:
-            'https://github.com/ravichoudhary29/ping-pong-game-VanillaJS',
-    },
+    // {
+    //     name: 'Tesla Landing Page',
+    //     category: 'Vanilla JS Projects',
+    //     description:
+    //         'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+    //     tags: [
+    //         {
+    //             name: 'html',
+    //             color: 'blue-text-gradient',
+    //         },
+    //         {
+    //             name: 'css',
+    //             color: 'green-text-gradient',
+    //         },
+    //         // {
+    //         //     name: 'javascript',
+    //         //     color: 'pink-text-gradient',
+    //         // },
+    //     ],
+    //     image: tesla_landing,
+    //     build_link: 'https://ravichoudhary29.github.io/tesla-VanillaJS/',
+    //     source_code_link_github:
+    //         'https://github.com/ravichoudhary29/ping-pong-game-VanillaJS',
+    // },
     {
         name: 'Netflix 2.0 Clone',
         category: 'Top Tech Clones',

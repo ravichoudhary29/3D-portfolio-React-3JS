@@ -88,8 +88,8 @@ const ProjectCard = ({
 const Works = () => {
     const allCategories = [
         'Featured React/React-Native Projects',
-        'Vanilla JS Projects',
         'Top Tech Clones',
+        'Vanilla JS Projects',
         'Other Important Projects',
     ]
 
