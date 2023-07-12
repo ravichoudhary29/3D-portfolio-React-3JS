@@ -140,12 +140,14 @@ const Works = () => {
 
                 return (
                     <div key={category} className="mt-25">
-                        <h3 className="text-3xl font-bold text-blue-600">
+                        <h3 className=" mt-12 text-3xl font-bold text-blue-600 text-center">
                             {category}
                         </h3>
-                        <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-                            {categoryDescriptions[category]}
-                        </p>
+                        <div className="flex justify-center">
+                            <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-center">
+                                {categoryDescriptions[category]}
+                            </p>
+                        </div>
                         {chunk(categoryProjects, 3).map((projectRow, index) => (
                             <div key={index} className="flex gap-7 mt-5">
                                 {projectRow.map((project, index) => (
