@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { styles } from '../styles'
 import { navLinks } from '../constants'
 import { logo, menu, close } from '../assets'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faGithub,
+    faLinkedin,
+    faInstagram,
+} from '@fortawesome/free-brands-svg-icons'
+import { faFile } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
     const [active, setActive] = useState('')
@@ -32,7 +40,45 @@ const Navbar = () => {
                         </span>
                     </p>
                 </Link>
+
                 <ul className="list-none hidden sm:flex flex-row gap-10">
+                    <a
+                        href="https://github.com/ravichoudhary29"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FontAwesomeIcon
+                            icon={faGithub}
+                            className="text-white hover:text-secondary text-2xl mr-4"
+                        />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/thecodingnomad/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FontAwesomeIcon
+                            icon={faLinkedin}
+                            className="text-white hover:text-secondary text-2xl mr-4"
+                        />
+                    </a>
+                    <a
+                        href="https://www.instagram.com/thecodingnomad/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <FontAwesomeIcon
+                            icon={faInstagram}
+                            className="text-white hover:text-secondary text-2xl mr-4"
+                        />
+                    </a>
+                    <a
+                        href="path/to/your/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Resume">
+                        <FontAwesomeIcon
+                            icon={faFile}
+                            className="text-white hover:text-secondary text-2xl"
+                        />
+                    </a>
                     {navLinks.map((link) => (
                         <li
                             key={link.id}
@@ -46,6 +92,7 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
+
                 <div className="sm:hidden flex flex-1 justify-end items-center">
                     <img
                         src={toggle ? close : menu}
@@ -56,8 +103,48 @@ const Navbar = () => {
                     <div
                         className={`${
                             !toggle ? 'hidden' : 'flex'
-                        } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+                        } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl flex-col items-start`}>
                         <ul className="list-none flex justify-end items-start flex-col gap-4">
+                            <a
+                                href="https://github.com/ravichoudhary29"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mb-4">
+                                <FontAwesomeIcon
+                                    icon={faGithub}
+                                    className="text-white hover:text-secondary text-2xl"
+                                />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/thecodingnomad/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mb-4">
+                                <FontAwesomeIcon
+                                    icon={faLinkedin}
+                                    className="text-white hover:text-secondary text-2xl"
+                                />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/thecodingnomad/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mb-4">
+                                <FontAwesomeIcon
+                                    icon={faInstagram}
+                                    className="text-white hover:text-secondary text-2xl"
+                                />
+                            </a>
+                            <a
+                                href="path/to/your/resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Resume">
+                                <FontAwesomeIcon
+                                    icon={faFile}
+                                    className="text-white hover:text-secondary text-2xl"
+                                />
+                            </a>
                             {navLinks.map((link) => (
                                 <li
                                     key={link.id}
