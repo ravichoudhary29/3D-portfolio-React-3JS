@@ -149,7 +149,9 @@ const Works = () => {
                             </p>
                         </div>
                         {chunk(categoryProjects, 3).map((projectRow, index) => (
-                            <div key={index} className="flex gap-7 mt-5">
+                            <div
+                                key={index}
+                                className="flex gap-7 mt-5 flex-wrap">
                                 {projectRow.map((project, index) => (
                                     <ProjectCard
                                         key={`project-${index}`}

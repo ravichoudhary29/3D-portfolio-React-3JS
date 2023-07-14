@@ -73,11 +73,15 @@ const Navbar = () => {
                         href="path/to/your/resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        title="Resume">
+                        className="relative group" // 'group' is for grouping hover state
+                    >
                         <FontAwesomeIcon
                             icon={faFile}
                             className="text-white hover:text-secondary text-2xl"
                         />
+                        <span className="hidden group-hover:block text-sm bg-black text-white py-1 px-2 rounded absolute left-1/2 transform -translate-x-1/2 -translate-y-full">
+                            Resume
+                        </span>
                     </a>
                     {navLinks.map((link) => (
                         <li
