@@ -65,17 +65,17 @@ export const navLinks = [
 
 const services = [
     {
-        title: 'Web Developer',
+        title: 'Software Developer',
         icon: web,
     },
-    {
-        title: 'React Native Developer',
-        icon: mobile,
-    },
-    {
-        title: 'UI/UX Designer',
-        icon: figma,
-    },
+    // {
+    //     title: 'React Native Developer',
+    //     icon: mobile,
+    // },
+    // {
+    //     title: 'UI/UX Designer',
+    //     icon: figma,
+    // },
 ]
 
 const technologies = [
@@ -152,7 +152,7 @@ const technologies = [
 
 const experiences = [
     {
-        title: 'Web Developer',
+        title: 'Frontend Developer',
         company_name: 'Huzzle(huzzle.app)',
         icon: huzzle,
         iconBg: '#383E56',
@@ -166,12 +166,12 @@ const experiences = [
     },
     {
         title: 'Frontend Developer (Intern)',
-        company_name: 'Showday(showday.io)',
+        company_name: 'USA based startup',
         icon: showday,
         iconBg: '#E6DEDD',
         date: 'Dec 2022 - Apr 2022',
         points: [
-            'As an intern at Showday, I utilized my Javascript, Next.js, Typescript skills to contribute to the development of an innovative application that creates shoppable videos for Shopify clients.',
+            'As an intern at this company, I utilized my Javascript, Next.js, Typescript, SCSS skills to contribute to the development of an innovative application that creates shoppable videos for Shopify clients.',
             'My exposure to cutting-edge frontend libraries during the internship helped enhance the user interface, resulting in a seamless and efficient shopping experience for users.',
             'I also honed my proficiency in SASS for styling, assisting in developing an attractive and intuitive UI that drove customer engagement and boosted user satisfaction..',
         ],

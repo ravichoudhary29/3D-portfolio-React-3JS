@@ -44,13 +44,13 @@ const About = () => {
                 variants={(fadeIn('', '', 0.1), 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
                 I'm a seasoned frontend developer, my core competencies lie in
-                leveraging cutting-edge technologies such as React, Next.js,3JS,
-                TypeScript, React Native, Node.js, MongoDB, etc. I also have
+                leveraging cutting-edge technologies such as React, Next.js,
+                TypeScript, axios, stripe, firebase, sanity etc. I also have
                 extensive experience working with UI-focused tools like Tailwind
                 and SASS. In a past life, I worked at a US-based company,
                 developing innovative shoppable video experiences for Shopify
                 customers. Currently, I'm sharpening my skills at a UK-based
-                organization, developing a revolutionary extension that employs
+                organization, developing a chrome extension that employs
                 AI to autofill job applications. This innovation simplifies the
                 hiring process, making it more seamless for users. My passion
                 for web development extends beyond my day-to-day work. I enjoy
