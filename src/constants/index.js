@@ -152,42 +152,40 @@ const technologies = [
 
 const experiences = [
     {
-        title: 'Frontend Developer',
-        company_name: 'Huzzle(huzzle.app)',
+        title: 'Software Developer',
+        company_name: 'Huzzle.app',
         icon: huzzle,
         iconBg: '#383E56',
-        date: 'May 2022 - Present',
+        date: 'May 2023 - Present',
         points: [
-            'In my current role at Huzzle, I am developing a cutting-edge Google Chrome extension utilizing React.js and TypeScript',
-            'This extension is designed from the ground up to streamline job applications for users, using advanced AI technologies.',
-            'Leveraging Chat GPT, the extension automatically identifies form input fields, effectively interacting with a wide range of application interfaces',
-            'For descriptive response fields, the extension harnesses the power of Chat GPT to generate articulate and contextually accurate answers, thereby transforming the users experience',
+            'Spearheaded the development of an AI-powered job autofill Chrome extension, achieving a 35% user signup rate during promotional campaigns.',
+            'Utilized React.js, TypeScript, and SCSS to build and optimize user-centric features, enhancing the overall user experience.',
+            'Integrated GPT API for auto-generating descriptive answers, elevating user interaction and boosting application fill rates.',
+            'Leveraged advanced AI technologies to streamline job applications, transforming user experience.'
         ],
     },
     {
-        title: 'Frontend Developer (Intern)',
-        company_name: 'USA based startup',
+        title: 'Software Developer (Intern)',
+        company_name: 'Showday.io',
         icon: showday,
         iconBg: '#E6DEDD',
-        date: 'Dec 2022 - Apr 2022',
+        date: 'Dec 2022 - May 2023',
         points: [
-            'As an intern at this company, I utilized my Javascript, Next.js, Typescript, SCSS skills to contribute to the development of an innovative application that creates shoppable videos for Shopify clients.',
-            'My exposure to cutting-edge frontend libraries during the internship helped enhance the user interface, resulting in a seamless and efficient shopping experience for users.',
-            'I also honed my proficiency in SASS for styling, assisting in developing an attractive and intuitive UI that drove customer engagement and boosted user satisfaction..',
+            'Proactively resolved over 50 pending/backlog tickets, contributing to system efficiency.',
+            'Utilized JavaScript, Next.js, TypeScript, and SCSS to create interactive live shopping features, enhancing the e-commerce experience.',
+            'Enhanced the UI using cutting-edge frontend libraries and SCSS, which drove customer engagement and satisfaction.',
         ],
     },
-
     {
-        title: 'Assistant Engineer',
+        title: 'Assistant Engineer (Sub Divisional Officer)',
         company_name: 'Road Construction Department, Govt. of Bihar',
         icon: rcd,
         iconBg: '#383E56',
         date: 'Aug 2018 - Dec 2022',
         points: [
-            'Constant Monitoring of Road Projects under Bihar Government almost 1300 kilometers of road.',
-            'Checking of Estimates, Tender Documents, Cost Variations, Time Extensions, DPR etc.for Road Projects.',
-            ' Awarding NOC for Retail Outlets for Seemanchal Wing comprising 10 districts under Government of Bihar.',
-            'Frequently deployed as Patrolling Magistrate in government elections i.e. LS,RS etc. , flood monitoring officer (during rainy season).',
+            'Selected through the All India GATE exam, scoring above the 99th percentile twice, for overseeing 1,300 km of road projects in South Bihar.',
+            'Handled the complete approval process for DPR, tender documents, and other contractual aspects, ensuring timely and within-budget project execution.',
+            'Frequently deployed as Patrolling Magistrate during elections and as a flood monitoring officer, highlighting multitasking and adaptability.',
         ],
     },
 ]
