@@ -70,7 +70,7 @@ const Navbar = () => {
                         />
                     </a>
                     <a
-                        href="path/to/your/resume.pdf"
+                        href="/latest_resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative group" // 'group' is for grouping hover state
@@ -140,7 +140,7 @@ const Navbar = () => {
                                 />
                             </a>
                             <a
-                                href="path/to/your/resume.pdf"
+                                href="/latest_resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title="Resume">
