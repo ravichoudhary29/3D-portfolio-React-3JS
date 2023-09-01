@@ -153,7 +153,7 @@ const technologies = [
 const experiences = [
     {
         title: 'Software Developer',
-        company_name: 'Huzzle.app',
+        company_name: 'Huzzle.app (London)',
         icon: huzzle,
         iconBg: '#383E56',
         date: 'May 2023 - Present',
@@ -166,7 +166,7 @@ const experiences = [
     },
     {
         title: 'Software Developer (Intern)',
-        company_name: 'Showday.io',
+        company_name: 'Showday.io (USA)',
         icon: showday,
         iconBg: '#E6DEDD',
         date: 'Dec 2022 - May 2023',
@@ -267,7 +267,7 @@ const projects = [
         image: portfolio,
         source_code_link_github:
             'https://github.com/ravichoudhary29/personalportfolio',
-        build_link: 'https://www.thecodingnomad.in',
+        build_link: 'https://personalportfolio-lyart.vercel.app/',
     },
     {
         name: 'Uber 2.0 (React Native)',
