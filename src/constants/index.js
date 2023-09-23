@@ -415,7 +415,7 @@ const projects = [
             },
         ],
         image: netflix,
-        build_link: 'https://netflix-2-0-ruddy.vercel.app/',
+        build_link: 'https://netflix-clone-2-0-ruddy.vercel.app/',
         source_code_link_github:
             'https://github.com/ravichoudhary29/netflix-2.0',
     },
