@@ -443,7 +443,7 @@ const projects = [
             },
         ],
         image: instagram,
-        build_link: 'https://netflix-2-0-ruddy.vercel.app/',
+        build_link: 'https://instagram-2-swart.vercel.app/',
         source_code_link_github:
             'https://github.com/ravichoudhary29/netflix-2.0',
     },
