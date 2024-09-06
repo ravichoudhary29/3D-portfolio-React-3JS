@@ -53,7 +53,7 @@ const Navbar = () => {
             />
           </a>
           <a
-            href="https://www.linkedin.com/in/thecodingnomad/"
+            href="https://www.linkedin.com/in/ravikumar2901/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -63,7 +63,7 @@ const Navbar = () => {
             />
           </a>
           <a
-            href="https://www.instagram.com/thecodingnomad/"
+            href="https://www.instagram.com/myself.ravikumar/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -73,7 +73,7 @@ const Navbar = () => {
             />
           </a>
           <a
-            href="/Ravi_Kumar.pdf"
+            href="https://docs.google.com/document/d/1Uh1dWb4RCepRXAM8fwtTOxSnaXqaJhY-bc9UA1Q-97Q/edit"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group" // 'group' is for grouping hover state
@@ -83,7 +83,7 @@ const Navbar = () => {
               className="text-white hover:text-secondary text-2xl"
             />
             <span className="hidden group-hover:block text-sm bg-black text-white py-1 px-2 rounded absolute left-1/2 transform -translate-x-1/2 -translate-y-full">
-              Resume
+              View Resume
             </span>
           </a>
           {navLinks.map((link) => (
