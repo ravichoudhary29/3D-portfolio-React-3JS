@@ -73,7 +73,7 @@ const Navbar = () => {
             />
           </a>
           <a
-            href="https://docs.google.com/document/d/1Uh1dWb4RCepRXAM8fwtTOxSnaXqaJhY-bc9UA1Q-97Q/edit"
+            href="https://docs.google.com/document/d/1Iun8kXtpOBtPv8iBQfpO1V69KdbHS7DMOTwWshA0mtg/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group" // 'group' is for grouping hover state
