@@ -169,24 +169,12 @@ const experiences = [
     company_name: 'Showday.io (USA)',
     icon: showday,
     iconBg: '#E6DEDD',
-    date: 'May 2022-May 2023',
+    date: 'Dec 2021-May 2023',
     points: [
       'Engineered a product recommendation engine that boosted platform conversion rates by 25% for an interactive live shopping experience.',
       'Introduced frontend optimizations, reducing page load times by 30%, which significantly improved overall user experience.',
       'Developed reusable components and optimized front-end architecture, resulting in better performance and scalability. Increased user engagement by 50% through interactive and personalized features.',
       'Maintained platform stability by resolving critical bugs, ensuring 99% uptime.',
-    ],
-  },
-  {
-    title: 'React Frontend Developer Intern',
-    company_name: 'Showday.io (USA)',
-    icon: showday,
-    iconBg: '#E6DEDD',
-    date: 'Dec 2021-Apr 2022',
-    points: [
-      'Contributed to frontend features that improved user satisfaction by 15%.',
-      'Participated in codebase enhancements, reducing code complexity by 20%, improving maintainability and performance.',
-      'Enhanced the UI using cutting-edge frontend libraries and SCSS, which drove customer engagement and satisfaction.',
     ],
   },
   {
@@ -208,7 +196,7 @@ const testimonials = [
     testimonial:
       'During their internship, this individual demonstrated a solid grasp of our codebase, swiftly fixing bugs and adding new features to our Next.js application. Their contribution was invaluable to our shoppable video application.',
     name: 'Chandan Chaudhary',
-    designation: 'Tech Lead',
+    designation: 'Head of Software Engineering',
     company: 'Showday',
     image: chandan,
     url: 'https://www.linkedin.com/in/chaudharychandan/',
