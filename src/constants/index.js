@@ -203,7 +203,7 @@ const testimonials = [
   },
   {
     testimonial:
-      'With their outstanding skills in React and TypeScript, this developer is making significant strides in building a GPT-powered Chrome extension for job application autofill. Their dedication and talent are remarkable.',
+      'With his outstanding skills in React and TypeScript, this developer is making significant strides in building a GPT-powered Chrome extension for job application autofill. Their dedication and talent are remarkable.',
     name: 'Amit Choudhary',
     designation: 'Founder & CTO',
     company: 'Huzzle',
