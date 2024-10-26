@@ -194,7 +194,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      'During their internship, this individual demonstrated a solid grasp of our codebase, swiftly fixing bugs and adding new features to our Next.js application. Their contribution was invaluable to our shoppable video application.',
+      'During his tenure as a Frontend developer, Ravi demonstrated a solid grasp of our codebase, swiftly fixing bugs and adding new features to our Next.js application. Their contribution was invaluable to our shoppable video application.',
     name: 'Chandan Chaudhary',
     designation: 'Head of Software Engineering',
     company: 'Showday',
