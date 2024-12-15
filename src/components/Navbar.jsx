@@ -72,20 +72,6 @@ const Navbar = () => {
               className="text-white hover:text-secondary text-2xl mr-4"
             />
           </a>
-          <a
-            href="https://docs.google.com/document/d/1Iun8kXtpOBtPv8iBQfpO1V69KdbHS7DMOTwWshA0mtg/edit?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative group" // 'group' is for grouping hover state
-          >
-            <FontAwesomeIcon
-              icon={faFile}
-              className="text-white hover:text-secondary text-2xl"
-            />
-            <span className="hidden group-hover:block text-sm bg-black text-white py-1 px-2 rounded absolute left-1/2 transform -translate-x-1/2 -translate-y-full">
-              View Resume
-            </span>
-          </a>
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -94,7 +80,18 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              {console.log(link)}
+              <a
+                target={link.id === 'resume' ? '_blank' : ''}
+                rel={link.id === 'resume' ? 'noopener noreferrer' : ''}
+                href={
+                  link.id === 'resume'
+                    ? 'https://docs.google.com/document/d/1Iun8kXtpOBtPv8iBQfpO1V69KdbHS7DMOTwWshA0mtg/edit?usp=sharing'
+                    : `#${link.id}`
+                }
+              >
+                {link.title}
+              </a>
             </li>
           ))}
         </ul>
