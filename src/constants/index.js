@@ -190,7 +190,7 @@ const experiences = [
     company_name: 'Road Construction Department, Govt. of Bihar',
     icon: rcd,
     iconBg: '#383E56',
-    date: 'Aug 2018-Nov 2021',
+    date: 'Aug 2018-Nov 2022',
     points: [
       'Selected through the All India GATE exam, scoring above the 99th percentile twice, for overseeing 1,300 km of road projects in South Bihar.',
       'Handled the complete approval process for DPR, tender documents, and other contractual aspects, ensuring timely and within-budget project execution.',
