@@ -25,7 +25,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-fit"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-fit bg-gradient-to-br from-purple-900 to-slate-900 border border-pink-500 shadow-2xl "
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -66,7 +66,12 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px] hover:underline cursor-pointer"   onClick={() => window.open(build_link, '_blank')} >{name}</h3>
+          <h3
+            className="text-white font-bold text-[24px] hover:underline cursor-pointer"
+            onClick={() => window.open(build_link, '_blank')}
+          >
+            {name}
+          </h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
