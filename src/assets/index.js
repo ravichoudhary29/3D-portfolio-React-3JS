@@ -43,6 +43,8 @@ import shopify from './company/shopify.png'
 import starbucks from './company/starbucks.png'
 import tesla from './company/tesla.png'
 import huzzle from './company/huzzle.jpg'
+import deloitte from './company/deloitte.png'
+import nextiva from './company/nextiva.png'
 
 import carrent from './carrent.png'
 import jobit from './jobit.png'
@@ -58,6 +60,8 @@ export {
     stripe,
     next,
     huzzle,
+    deloitte,
+    nextiva,
     rcd,
     showday,
     logo,

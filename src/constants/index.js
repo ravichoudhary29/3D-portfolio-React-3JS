@@ -26,6 +26,8 @@ import {
   showday,
   rcd,
   huzzle,
+  deloitte,
+  nextiva,
   next,
   stripe,
   dashboard,
@@ -160,11 +162,35 @@ const technologies = [
 
 const experiences = [
   {
+    title: 'Frontend Developer',
+    company_name: 'Deloitte USI',
+    icon: deloitte,
+    iconBg: '#E6DEDD',
+    date: 'Mar 2025 - Present',
+    points: [
+      'Deployed across 3+ enterprise projects delivering end-to-end UI implementation for high-impact client engagements.',
+      'Built an Agentic Data Modernization Platform from scratch, enabling AI-driven data transformation workflows for the organization.',
+      'Developed an Agentic Pipeline with human-in-the-loop capabilities for an intelligent Email Analyzer, streamlining automated decision-making.',
+      'Engineered complex form features with seamless backend API integrations, improving data collection efficiency across Vision-to-Value projects.',
+    ],
+  },
+  {
+    title: 'Frontend Developer',
+    company_name: 'Nextiva (Product-Based Startup)',
+    icon: nextiva,
+    iconBg: '#FFFFFF',
+    date: 'Dec 2024 - Feb 2025',
+    points: [
+      'Developed and shipped multiple user interface features, directly enhancing product usability and user experience.',
+      'Identified and resolved critical UI bugs, ensuring a polished and seamless interface across the platform.',
+    ],
+  },
+  {
     title: 'Software Developer',
     company_name: 'Huzzle.app (London)',
     icon: huzzle,
     iconBg: '#383E56',
-    date: 'May 2023 - Present',
+    date: 'May 2023 - Oct 2024',
     points: [
       'Spearheaded the development of an AI-powered Google Chrome extension, featured and verified on the Chrome Web Store, achieving a 4.7/5 rating. Empowered 1000+ societies and 100,000+ students to autofill job applications with a single click.',
       'Orchestrated critical bug fixes and AI-powered features, tripling the user base and positioning Huzzle as the leading career platform with over 80,000 jobs for graduates.',
@@ -177,7 +203,7 @@ const experiences = [
     company_name: 'Showday.io (USA)',
     icon: showday,
     iconBg: '#E6DEDD',
-    date: 'Dec 2021-May 2023',
+    date: 'Jul 2020 - May 2023',
     points: [
       'Engineered a product recommendation engine that boosted platform conversion rates by 25% for an interactive live shopping experience.',
       'Introduced frontend optimizations, reducing page load times by 30%, which significantly improved overall user experience.',
@@ -190,7 +216,7 @@ const experiences = [
     company_name: 'Road Construction Department, Govt. of Bihar',
     icon: rcd,
     iconBg: '#383E56',
-    date: 'Aug 2018-Nov 2022',
+    date: 'Aug 2018 - Jun 2020',
     points: [
       'Selected through the All India GATE exam, scoring above the 99th percentile twice, for overseeing 1,300 km of road projects in South Bihar.',
       'Handled the complete approval process for DPR, tender documents, and other contractual aspects, ensuring timely and within-budget project execution.',
