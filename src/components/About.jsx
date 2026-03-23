@@ -105,6 +105,26 @@ const About = () => {
         </motion.p>
       </div>
 
+      {/* Social Proof Bar */}
+      <motion.div
+        variants={fadeIn('up', 'spring', 0.3, 0.75)}
+        className="mt-10 flex items-center justify-center gap-6 sm:gap-10 py-4 px-6 rounded-2xl bg-tertiary border border-accent/10"
+      >
+        {[
+          { num: '7+', label: 'Years Experience' },
+          { num: '5', label: 'Companies' },
+          { num: '100K+', label: 'Users Impacted' },
+        ].map((item, i) => (
+          <React.Fragment key={item.label}>
+            {i > 0 && <div className="w-[1px] h-8 bg-accent/15" />}
+            <div className="flex flex-col items-center">
+              <span className="text-accent font-black text-[22px] sm:text-[28px] leading-tight">{item.num}</span>
+              <span className="text-text-secondary text-[11px] sm:text-[13px] mt-1">{item.label}</span>
+            </div>
+          </React.Fragment>
+        ))}
+      </motion.div>
+
       {/* Stats Section */}
       <div className="mt-12 flex flex-wrap gap-6 justify-center">
         {stats.map((stat, index) => (

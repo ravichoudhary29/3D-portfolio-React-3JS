@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 import { styles } from '../styles';
@@ -98,27 +98,6 @@ const Hero = () => {
             </MagneticButton>
           </motion.div>
 
-          {/* Social proof bar */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.4, duration: 0.8 }}
-            className="mt-8 flex items-center gap-4 sm:gap-6 text-text-secondary text-[13px] sm:text-[14px]"
-          >
-            {[
-              { num: '7+', label: 'Years' },
-              { num: '5', label: 'Companies' },
-              { num: '100K+', label: 'Users' },
-            ].map((item, i) => (
-              <React.Fragment key={item.label}>
-                {i > 0 && <span className="text-accent/30">|</span>}
-                <span>
-                  <span className="text-accent font-bold">{item.num}</span>{' '}
-                  {item.label}
-                </span>
-              </React.Fragment>
-            ))}
-          </motion.div>
         </div>
       </motion.div>
 
