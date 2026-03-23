@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Tilt } from 'react-tilt';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 import { styles } from '../styles';
-import { services } from '../constants';
+import { services, stats } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
+import AnimatedHeading from './AnimatedHeading';
+import { ravi2 } from '../assets';
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-[250px] w-full">
+  <Tilt className="xs:w-[220px] w-full">
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
@@ -19,15 +21,14 @@ const ServiceCard = ({ index, title, icon }) => (
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col bg-gradient-to-br from-slate-900 to-slate-800 border border-cyan-400 shadow-2xl"
+        className="bg-tertiary rounded-[20px] py-5 px-8 min-h-[240px] flex justify-evenly items-center flex-col border border-accent/10 card-glow gradient-border"
       >
         <img
           src={icon}
-          alt="web-development"
+          alt={title}
           className="w-16 h-16 object-contain"
         />
-
-        <h3 className="text-white text-[20px] font-bold text-center">
+        <h3 className="text-text-primary text-[18px] font-bold text-center">
           {title}
         </h3>
       </div>
@@ -35,34 +36,83 @@ const ServiceCard = ({ index, title, icon }) => (
   </Tilt>
 );
 
+const AnimatedCounter = ({ value, suffix = '', label }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!isInView) return;
+    let start = 0;
+    const duration = 2000;
+    const increment = value / (duration / 16);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= value) {
+        setCount(value);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+    return () => clearInterval(timer);
+  }, [isInView, value]);
+
+  return (
+    <div ref={ref} className="stat-card flex flex-col items-center p-6 bg-tertiary rounded-2xl border border-accent/10 min-w-[140px] card-glow">
+      <span className="text-accent font-black text-[40px] leading-tight">
+        {count}{suffix}
+      </span>
+      <span className="text-text-secondary text-[14px] mt-2 text-center">{label}</span>
+    </div>
+  );
+};
+
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.div>
-      <motion.p
-        variants={(fadeIn('', '', 0.1), 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I'm Ravi Kumar, a Frontend Developer with over 5.5 years of experience
-        in building responsive and high-performance web applications. My
-        expertise lies in leveraging technologies such as React, Next.js,
-        TypeScript, JavaScript, and Node.js, alongside UI-focused tools like
-        Tailwind CSS, SASS, and Bootstrap. Currently, I’m developing an
-        AI-powered Chrome extension that simplifies job applications, achieving
-        a 4.7/5 rating on the Chrome Web Store. Previously, I engineered
-        innovative shoppable video experiences for Shopify customers, enhancing
-        user engagement and driving conversion rates. I am passionate about
-        creating accessible and inclusive digital solutions while continuously
-        keeping up with industry trends and best practices. My commitment to
-        delivering impactful user experiences drives my work in Agile
-        environments, where I collaborate effectively with cross-functional
-        teams.
-      </motion.p>
+        <AnimatedHeading text="Overview." className={styles.sectionHeadText} />
+      </div>
+      <div className="mt-6 flex flex-col md:flex-row gap-8 items-start">
+        <motion.div
+          variants={fadeIn('right', 'spring', 0.2, 0.75)}
+          className="flex-shrink-0 mx-auto md:mx-0"
+        >
+          <div className="profile-ring w-[140px] h-[140px]">
+            <img
+              src={ravi2}
+              alt="Ravi Kumar"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
+        <motion.p
+          variants={fadeIn('', '', 0.1, 1)}
+          className="text-text-secondary text-[17px] leading-[30px]"
+        >
+          I'm Ravi Kumar, a Frontend Developer with over 7+ years of experience
+          in building responsive and high-performance web applications. My
+          expertise lies in leveraging technologies such as React, Next.js,
+          TypeScript, JavaScript, and Node.js, alongside UI-focused tools like
+          Tailwind CSS, SASS, and Material UI. Currently at Deloitte USI, I'm
+          building enterprise-grade Agentic AI platforms. Previously, I developed
+          an AI-powered Chrome extension at Huzzle achieving a 4.7/5 rating,
+          and engineered shoppable video experiences at Showday. I am passionate
+          about creating accessible and inclusive digital solutions while delivering
+          impactful user experiences in Agile environments.
+        </motion.p>
+      </div>
 
-      <div className="mt-20 flex flex-wrap gap-10 justify-center">
+      {/* Stats Section */}
+      <div className="mt-12 flex flex-wrap gap-6 justify-center">
+        {stats.map((stat, index) => (
+          <AnimatedCounter key={index} {...stat} />
+        ))}
+      </div>
+
+      <div className="mt-16 flex flex-wrap gap-8 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

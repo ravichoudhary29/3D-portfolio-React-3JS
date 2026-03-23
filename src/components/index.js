@@ -7,6 +7,10 @@ import Experience from './Experience';
 import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
+import ThemeToggle from './ThemeToggle';
+import ScrollProgress from './ScrollProgress';
+import BackToTop from './BackToTop';
+import Footer from './Footer';
 
 export {
   Hero,
@@ -17,8 +21,12 @@ export {
   Works,
   Feedbacks,
   Contact,
-  EarthCanvas, 
-  BallCanvas, 
-  ComputersCanvas, 
+  ThemeToggle,
+  ScrollProgress,
+  BackToTop,
+  Footer,
+  EarthCanvas,
+  BallCanvas,
+  ComputersCanvas,
   StarsCanvas
 }
