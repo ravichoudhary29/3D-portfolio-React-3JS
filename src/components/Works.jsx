@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Tilt } from 'react-tilt';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { styles } from '../styles';
 import { github, build } from '../assets';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
-import { fadeIn, slideIn, textVariant } from '../utils/motion';
+import { fadeIn, textVariant } from '../utils/motion';
+import AnimatedHeading from './AnimatedHeading';
+
+const RevealImage = ({ children, className }) => {
+  const ref = useRef(null);
+  const [revealed, setRevealed] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setRevealed(true); obs.disconnect(); } },
+      { threshold: 0.3 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  return (
+    <div ref={ref} className={`${className} img-reveal ${revealed ? 'revealed' : ''}`}>
+      {children}
+    </div>
+  );
+};
 
 const ProjectCard = ({
   index,
@@ -16,73 +37,74 @@ const ProjectCard = ({
   image,
   source_code_link_github,
   build_link,
+  featured,
 }) => {
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    <motion.div
+      layout
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+    >
       <Tilt
         options={{
-          max: 45,
+          max: 25,
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-fit bg-gradient-to-br from-purple-900 to-slate-900 border border-pink-500 shadow-2xl "
+        className="bg-tertiary p-5 rounded-2xl sm:w-[340px] w-full border border-accent/10 shadow-card card-glow gradient-border"
       >
-        <div className="relative w-full h-[230px]">
+        <RevealImage className="relative w-full h-[220px] overflow-hidden rounded-2xl group">
           <img
             src={image}
-            alt="project_image"
-            className="w-full h-full object-fit rounded-2xl"
+            alt={name}
+            loading="lazy"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div className="absolute top-2 left-5 flex justify-start m-3 card-img_hover">
-            <div
+          {/* Overlay on hover */}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+          {featured && (
+            <span className="absolute bottom-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-accent text-white shadow-lg">
+              Featured
+            </span>
+          )}
+          <div className="absolute top-3 left-3 flex gap-2">
+            <button
               onClick={() => window.open(source_code_link_github, '_blank')}
-              className="bg-white/50 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer relative shadow-md"
+              className="bg-white/90 dark:bg-black/60 w-9 h-9 rounded-full flex justify-center items-center cursor-pointer shadow-md hover:scale-110 transition-transform backdrop-blur-sm"
+              aria-label={`View ${name} source code`}
             >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-scale-down rounded-full"
-              />
-              <div className="opacity-0 hover:opacity-100 hover:rounded-full absolute inset-0 flex items-center justify-center transition-opacity duration-200 ease-in-out bg-black bg-opacity-50 text-white text-xs">
-                Github
-              </div>
-            </div>
-          </div>
-          <div className="absolute top-2 right-5 flex justify-end m-3 card-img_hover">
-            <div
+              <img src={github} alt="" className="w-4 h-4 object-scale-down" />
+            </button>
+            <button
               onClick={() => window.open(build_link, '_blank')}
-              className="bg-white/50 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer relative shadow-md"
+              className="bg-white/90 dark:bg-black/60 w-9 h-9 rounded-full flex justify-center items-center cursor-pointer shadow-md hover:scale-110 transition-transform backdrop-blur-sm"
+              aria-label={`View ${name} live demo`}
             >
-              <img
-                src={build}
-                alt="build"
-                className="w-1/2 h-1/2 object-contain rounded-full"
-              />
-              <div className="opacity-0 hover:opacity-100 hover:rounded-full absolute inset-0 flex items-center justify-center transition-opacity duration-200 ease-in-out bg-black bg-opacity-50 text-white text-xs">
-                Build
-              </div>
-            </div>
+              <img src={build} alt="" className="w-4 h-4 object-contain" />
+            </button>
           </div>
-        </div>
+        </RevealImage>
 
         <div className="mt-5">
           <h3
-            className="text-white font-bold text-[24px] hover:underline cursor-pointer"
+            className="text-text-primary font-bold text-[20px] hover:text-accent cursor-pointer transition-colors hover-underline inline-block"
             onClick={() => window.open(build_link, '_blank')}
           >
             {name}
           </h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <p className="mt-2 text-text-secondary text-[14px] leading-[22px]">{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p
+            <span
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className="text-[12px] px-3 py-1 rounded-full bg-accent/10 text-accent font-medium"
             >
-              #{tag.name}
-            </p>
+              {tag.name}
+            </span>
           ))}
         </div>
       </Tilt>
@@ -91,79 +113,62 @@ const ProjectCard = ({
 };
 
 const Works = () => {
-  const allCategories = [
-    'Featured React/React-Native Projects',
-    'Top Tech Clones',
-    'Vanilla JS Projects',
-  ];
+  const allCategories = ['All', 'Featured React/React-Native Projects', 'Top Tech Clones', 'Vanilla JS Projects'];
+  const [activeCategory, setActiveCategory] = useState('All');
 
-  const categoryDescriptions = {
-    'Featured React/React-Native Projects':
-      'These projects are modern looking with the latest used libraries. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    'Vanilla JS Projects':
-      'These projects are built using Vanilla Javascript. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    'Top Tech Clones':
-      'These are clones of popular tech platforms. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  };
+  const filteredProjects = activeCategory === 'All'
+    ? projects
+    : projects.filter((p) => p.category === activeCategory);
 
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-      </motion.div>
+      <div>
+        <p className={`${styles.sectionSubText}`}>My work</p>
+        <AnimatedHeading text="Projects." className={styles.sectionHeadText} />
+      </div>
 
       <div className="w-full flex">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-3 text-text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
+          Following projects showcase my skills and experience through
+          real-world examples. Each project is briefly described with
+          links to code repositories and live demos. They reflect my
           ability to solve complex problems, work with different technologies,
           and manage projects effectively.
         </motion.p>
       </div>
 
-      {allCategories.map((category) => {
-        function chunk(array, size) {
-          const chunked_arr = [];
-          let index = 0;
-          while (index < array.length) {
-            chunked_arr.push(array.slice(index, size + index));
-            index += size;
-          }
-          return chunked_arr;
-        }
-        const categoryProjects = projects.filter(
-          (project) => project.category === category
-        );
+      {/* Category Filter Tabs */}
+      <div className="mt-10 flex flex-wrap gap-3 justify-center">
+        {allCategories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveCategory(cat)}
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
+              activeCategory === cat
+                ? 'bg-accent text-white shadow-lg'
+                : 'bg-tertiary text-text-secondary border border-accent/20 hover:border-accent/50'
+            }`}
+          >
+            {cat === 'Featured React/React-Native Projects' ? 'React Projects' : cat}
+          </button>
+        ))}
+      </div>
 
-        return (
-          <div key={category} className="mt-25">
-            <h3 className=" mt-12 text-3xl font-bold text-blue-600 text-center">
-              {category}
-            </h3>
-            <div className="flex justify-center">
-              <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-center">
-                {categoryDescriptions[category]}
-              </p>
-            </div>
-            {chunk(categoryProjects, 3).map((projectRow, index) => (
-              <div key={index} className="flex gap-7 mt-5 overflow-x-scroll">
-                {projectRow.map((project, index) => (
-                  <ProjectCard
-                    key={`project-${index}`}
-                    index={index}
-                    {...project}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
-        );
-      })}
+      {/* Project Grid */}
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 justify-items-center">
+        <AnimatePresence mode="wait">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard
+              key={project.name}
+              index={index}
+              {...project}
+            />
+          ))}
+        </AnimatePresence>
+      </div>
     </>
   );
 };
