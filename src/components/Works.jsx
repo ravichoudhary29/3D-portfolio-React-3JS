@@ -13,15 +13,18 @@ const RevealImage = ({ children, className }) => {
   const ref = useRef(null);
   const [revealed, setRevealed] = useState(false);
   useEffect(() => {
+    setRevealed(false);
     const el = ref.current;
     if (!el) return;
+    // Fallback: reveal after 600ms regardless
+    const fallback = setTimeout(() => setRevealed(true), 600);
     const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setRevealed(true); obs.disconnect(); } },
-      { threshold: 0.3 }
+      ([entry]) => { if (entry.isIntersecting) { setRevealed(true); obs.disconnect(); clearTimeout(fallback); } },
+      { threshold: 0.05 }
     );
     obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
+    return () => { obs.disconnect(); clearTimeout(fallback); };
+  }, [children]);
   return (
     <div ref={ref} className={`${className} img-reveal ${revealed ? 'revealed' : ''}`}>
       {children}
