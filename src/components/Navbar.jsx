@@ -127,13 +127,15 @@ const Navbar = () => {
               onClick={() => setActive(link.title)}
             >
               <a
-                target={link.id === 'resume' ? '_blank' : ''}
-                rel={link.id === 'resume' ? 'noopener noreferrer' : ''}
                 href={
                   link.id === 'resume'
-                    ? socialLinks.resume
+                    ? socialLinks.resumeView
                     : `#${link.id}`
                 }
+                {...(link.id === 'resume' && {
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                })}
               >
                 {link.title}
               </a>
@@ -212,11 +214,11 @@ const Navbar = () => {
                       />
                     </a>
                     <a
-                      href="/Ravi_Kumar.pdf"
+                      href={socialLinks.resumeView}
                       target="_blank"
                       rel="noopener noreferrer"
-                      title="Resume"
-                      aria-label="Resume"
+                      title="View Resume"
+                      aria-label="View Resume"
                     >
                       <FontAwesomeIcon
                         icon={faFile}
@@ -242,11 +244,13 @@ const Navbar = () => {
                       <a
                         href={
                           link.id === 'resume'
-                            ? socialLinks.resume
+                            ? socialLinks.resumeView
                             : `#${link.id}`
                         }
-                        target={link.id === 'resume' ? '_blank' : undefined}
-                        rel={link.id === 'resume' ? 'noopener noreferrer' : undefined}
+                        {...(link.id === 'resume' && {
+                          target: '_blank',
+                          rel: 'noopener noreferrer',
+                        })}
                       >
                         {link.title}
                       </a>

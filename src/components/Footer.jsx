@@ -75,12 +75,12 @@ const Footer = () => {
               ))}
               <li>
                 <a
-                  href={socialLinks.resume}
+                  href={socialLinks.resumeView}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-secondary text-sm hover:text-accent transition-colors duration-300 hover-underline"
                 >
-                  Resume
+                  View Resume
                 </a>
               </li>
             </ul>

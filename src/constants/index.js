@@ -23,7 +23,6 @@ import {
   jobit,
   tripguide,
   threejs,
-  showday,
   rcd,
   huzzle,
   deloitte,
@@ -53,14 +52,15 @@ export const socialLinks = {
   github: 'https://github.com/ravichoudhary29',
   linkedin: 'https://www.linkedin.com/in/ravikumar2901/',
   instagram: 'https://www.instagram.com/myself.ravikumar/',
-  resume:
+  resume: '/Ravi_Kumar_Resume.docx',
+  resumeView:
     'https://docs.google.com/document/d/1C7W7G2b_BlVTAj70Ml0N5KHkuvIbyi8c/edit',
 };
 
 export const navLinks = [
   {
     id: 'resume',
-    title: 'Resume',
+    title: 'View Resume',
   },
   {
     id: 'about',
@@ -100,7 +100,7 @@ const yearsOfExp = Math.max(1, new Date().getFullYear() - 2018);
 const stats = [
   { value: yearsOfExp, suffix: '+', label: 'Years Experience' },
   { value: 20, suffix: '+', label: 'Projects Built' },
-  { value: 5, suffix: '', label: 'Companies' },
+  { value: 4, suffix: '', label: 'Companies' },
   { value: 100, suffix: 'K+', label: 'Users Impacted' },
 ];
 
@@ -185,29 +185,17 @@ const experiences = [
     ],
   },
   {
-    title: 'Software Developer',
-    company_name: 'Huzzle.app (London)',
+    title: 'Frontend Developer',
+    company_name: 'Huzzle.app (London, Remote)',
     icon: huzzle,
     iconBg: '#383E56',
-    date: 'May 2023 - Oct 2024',
+    date: 'Jul 2020 - Oct 2024',
     points: [
       'Spearheaded the development of an AI-powered Google Chrome extension, featured and verified on the Chrome Web Store, achieving a 4.7/5 rating. Empowered 1000+ societies and 100,000+ students to autofill job applications with a single click.',
       'Orchestrated critical bug fixes and AI-powered features, tripling the user base and positioning Huzzle as the leading career platform with over 80,000 jobs for graduates.',
       'Developed highly reusable UI components, improving scalability and maintainability. Enhanced platform usability for society managers, recruiters, and graduates, resulting in 4X growth in job postings.',
       'Collaborated with cross-functional Agile teams, optimizing product performance and increasing speed and efficiency. Focused on accessibility and inclusive design, driving higher user engagement.',
-    ],
-  },
-  {
-    title: 'React Frontend Developer',
-    company_name: 'Showday.io (USA)',
-    icon: showday,
-    iconBg: '#E6DEDD',
-    date: 'Jul 2020 - May 2023',
-    points: [
-      'Engineered a product recommendation engine that boosted platform conversion rates by 25% for an interactive live shopping experience.',
-      'Introduced frontend optimizations, reducing page load times by 30%, which significantly improved overall user experience.',
-      'Developed reusable components and optimized front-end architecture, resulting in better performance and scalability. Increased user engagement by 50% through interactive and personalized features.',
-      'Maintained platform stability by resolving critical bugs, ensuring 99% uptime.',
+      'Performed code reviews and ensured adherence to SDLC standards, consistently contributing to product excellence across the platform.',
     ],
   },
   {
@@ -230,7 +218,7 @@ const testimonials = [
       'During his tenure as a Frontend developer, Ravi demonstrated a solid grasp of our codebase, swiftly fixing bugs and adding new features to our Next.js application. Their contribution was invaluable to our shoppable video application.',
     name: 'Chandan Chaudhary',
     designation: 'Head of Software Engineering',
-    company: 'Showday',
+    company: 'Huzzle',
     image: chandan,
     url: 'https://www.linkedin.com/in/chaudharychandan/',
   },

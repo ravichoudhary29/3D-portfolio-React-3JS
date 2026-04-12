@@ -20,7 +20,8 @@ import weather from './weather.jpg'
 import pomodoro from './pomodoro.jpg'
 import chandan from './chandan.png'
 import amit from './amit.png'
-import ravi2 from './ravi2.png'
+import ravi2 from './ravi2.jpeg'
+import raviProfile from './ravi-profile.png'
 
 import css from './tech/css.png'
 import docker from './tech/docker.png'
@@ -49,7 +50,6 @@ import nextiva from './company/nextiva.png'
 import carrent from './carrent.png'
 import jobit from './jobit.png'
 import tripguide from './tripguide.png'
-import showday from './showday.png'
 import rcd from './rcd.jpg'
 import dashboard from './dashboard.png'
 
@@ -63,7 +63,6 @@ export {
     deloitte,
     nextiva,
     rcd,
-    showday,
     logo,
     backend,
     creator,
@@ -106,4 +105,5 @@ export {
     chandan,
     amit,
     ravi2,
+    raviProfile,
 }

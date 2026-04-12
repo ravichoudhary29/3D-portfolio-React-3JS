@@ -7,7 +7,7 @@ import { services, stats } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import AnimatedHeading from './AnimatedHeading';
-import { ravi2 } from '../assets';
+import { raviProfile } from '../assets';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[220px] w-full">
@@ -82,7 +82,7 @@ const About = () => {
         >
           <div className="profile-ring w-[140px] h-[140px]">
             <img
-              src={ravi2}
+              src={raviProfile}
               alt="Ravi Kumar"
               className="w-full h-full object-cover"
             />
@@ -97,11 +97,12 @@ const About = () => {
           expertise lies in leveraging technologies such as React, Next.js,
           TypeScript, JavaScript, and Node.js, alongside UI-focused tools like
           Tailwind CSS, SASS, and Material UI. Currently at Deloitte USI, I'm
-          building enterprise-grade Agentic AI platforms. Previously, I developed
-          an AI-powered Chrome extension at Huzzle achieving a 4.7/5 rating,
-          and engineered shoppable video experiences at Showday. I am passionate
-          about creating accessible and inclusive digital solutions while delivering
-          impactful user experiences in Agile environments.
+          building enterprise-grade Agentic AI platforms. Previously, I spent
+          4+ years at Huzzle (London) developing an AI-powered Chrome extension
+          that achieved a 4.7/5 rating and empowered 100,000+ students to
+          autofill job applications. I am passionate about creating accessible
+          and inclusive digital solutions while delivering impactful user
+          experiences in Agile environments.
         </motion.p>
       </div>
 
@@ -112,7 +113,7 @@ const About = () => {
       >
         {[
           { num: '7+', label: 'Years Experience' },
-          { num: '5', label: 'Companies' },
+          { num: '4', label: 'Companies' },
           { num: '100K+', label: 'Users Impacted' },
         ].map((item, i) => (
           <React.Fragment key={item.label}>
